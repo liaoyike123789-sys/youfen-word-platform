@@ -1,12 +1,12 @@
 -- 初始化分类
-MERGE INTO word_category (id, name, description) KEY(id) VALUES
+INSERT INTO word_category (id, name, description) VALUES
  (1, '四级核心', '大学英语四级高频词汇'),
  (2, '六级核心', '大学英语六级高频词汇'),
  (3, '考研高频', '考研英语高频词汇'),
  (4, '技术英语', '计算机与技术相关词汇');
 
 -- 初始化单词（30 个，便于演示与测试）
-MERGE INTO word (id, spelling, phonetic, meaning, category_id, difficulty) KEY(id) VALUES
+INSERT INTO word (id, spelling, phonetic, meaning, category_id, difficulty) VALUES
  (1,'abandon','/əˈbændən/','v. 抛弃，放弃',1,1),
  (2,'ability','/əˈbɪləti/','n. 能力，才能',1,1),
  (3,'absorb','/əbˈzɔːb/','v. 吸收，吸引',1,2),
